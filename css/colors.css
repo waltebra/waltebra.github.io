@@ -1,0 +1,31 @@
+.primary {
+    color: #FFFFFF;
+}
+
+.secondary {
+    color: #6A916F;
+}
+
+.secondary-light {
+    color: #BAFFC3;
+}
+
+.accent {
+    color: #45242D;
+}
+
+.primary-bg {
+    background-color: #FFFFFF;
+}
+
+.secondary-bg {
+    background-color: #6A916F;
+}
+
+.secondary-light-bg {
+    background-color: #BAFFC3;
+}
+
+.accent-bg {
+    background-color: #45242D;
+}
