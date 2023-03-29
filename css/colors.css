@@ -1,31 +1,39 @@
+/*ELEMENT COLORS*/
+
 .primary {
     color: #FFFFFF;
 }
 
 .secondary {
-    color: #6A916F;
+    color: #455E48;
 }
 
 .secondary-light {
-    color: #BAFFC3;
+    color: #A2DEAA;
 }
 
 .accent {
-    color: #45242D;
+    color: #5FDE70;
 }
+
+/*BACKGROUND COLORS*/
 
 .primary-bg {
     background-color: #FFFFFF;
 }
 
 .secondary-bg {
-    background-color: #6A916F;
+    background-color: #455E48;
 }
 
 .secondary-light-bg {
-    background-color: #BAFFC3;
+    background-color: #A2DEAA;
 }
 
 .accent-bg {
-    background-color: #45242D;
+    background-color: #5FDE70;
+}
+
+.content-bg {
+    background-color: #A1ACB3;
 }

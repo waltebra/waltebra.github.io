@@ -1,67 +1,41 @@
 <!DOCTYPE html>
-    <html>
+    <html lang="en">
         <head>
             <meta charset="utf-8">
-            <meta name="description" content="">
+            <meta name="description" content="Personal Website">
+            <meta name="author" content="Braden Walters">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="../css/styles.css">
-            <link rel="stylesheet" href="../css/colors.css">
+            <link rel="stylesheet" href="css/styles.css">
+            <link rel="stylesheet" href="css/colors.css">
             <!-- Add icon library -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <title>BOL Signing Site</title>
+            <title>Braden Walters</title>
         </head>
 
-            <body class="primary-bg">
-                <div class="navbar-div secondary-bg">
-                        <a class="navbar-item navbar-brand primary" href="../index.html">Braden Walters</a>
+        <body class="content-bg">
+                <div class="navbar-div secondary-bg  shadow">
+                    <div class="container">
+                        <a class="navbar-item navbar-brand primary" href="index.html">Braden Walters</a>
                         <div class="navbar-links">
-                            <a class="navbar-item primary" href="../index.html#about">About</a>
-                            <a class="navbar-item primary" href="../index.html#portfolio">My Portfolio</a>
-                            <a href="https://github.com/waltebra" class="fa fa-github" target="_blank"></a>
-                            <a href="https://www.linkedin.com/in/braden-w-1715b9231/" class="fa fa-linkedin" target="_blank"></a>
-                        </div>
-                </div>
-
-                <div id="content" class="content">
-                    <div id="about" class="center secondary-bg">
-                            <img src="../img/pholder.png" class="big-picture center">
-                            <h1>Bill of Lading Signature Capture</h1>
-                            <p>
-
-                            </p>
-                    </div>
-
-                    <div id="portfolio center">
-                        <div class="bar secondary-bg">
-                            <h1>My Projects</h1>
-                        </div>
-
-                        <div class="row">
-                            <div class="quarter secondary-bg" id="bol" onclick="window.open('bolsign.html')">
-                                <img src="../img/pholder.png" style="width:100%; height: 180px;">
-                                <h3>BOL Signature Website</h3>
-                                <p>Bill of Lading signature capturing site using Topaz Signature SDK.</p>
-                            </div>
-
-                            <div class="quarter secondary-bg" id="discord" onclick="window.open('discord.html')">
-                                <img src="../img/pholder.png" style="width:200px; height: 180px;">
-                                <h3>Discord Bot - Ouroboros</h3>
-                                <p>Using Node.js and the Discord API to create my own Discord bot</p>
-                            </div>
-                            <div class="quarter secondary-bg" id="liftly" onclick="window.open('bolsign.html')">
-                                <img src="../img/pholder.png" style="width:200px; height: 180px;">
-                                <h3>Liftly</h3>
-                                <p>Group project to wireframe a weightlifting tracking site.</p>
-                            </div>
-                            <div class="quarter secondary-bg" id="phold" onclick="window.open('bolsign.html')">
-                                <img src="../img/pholder.png" style="width:200px; height: 180px;">
-                                <h3>Placeholder</h3>
-                                <p>Group project </p>
-                            </div>
+                            <a class="navbar-item primary" href="#portfolio">My Portfolio</a>
+                            <a href="https://github.com/waltebra" class="fa navbar-item fa-github" target="_blank"></a>
+                            <a href="https://www.linkedin.com/in/braden-w-1715b9231/" class="fa navbar-item fa-linkedin" target="_blank"></a>
                         </div>
                     </div>
-                </div>
+                </div> <!--END OF NAVBAR-->
 
-            <script src="../js/script.js"></script>
+            <div id="placeholder" class="content">
+                <div class="container center primary-bg shadows">
+                    <div class="big-picture center">
+                        <img src="img\pholder.png" class="headshot">
+                    </div>
+                        <p>this is placeholder text</p>
+                </div>
+            </div> <!--END OF placeholder-->
+            
+        </div><!--END OF CONTAINER DIV-->
+
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
         </body>
     </html>
