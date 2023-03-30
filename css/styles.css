@@ -138,6 +138,22 @@ a:active {
     margin-left: auto;
 }
 
+p.text {
+    max-width: 74ch;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.left {
+    width: 48%;
+    /* float: left; */ 
+}
+
+.right {
+    width: 48%;
+    /* float: right; */
+}
+
 /*Adjusts portfolio and navbar for small screens*/
 @media screen and (max-width: 767px) {
     .row {
