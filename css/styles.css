@@ -1,4 +1,4 @@
-/*STYLES FOR THE WHOLE PAGE */
+/*STYLES FOR WHOLE PAGE ELEMENTS */
 * {
     box-sizing: border-box;
 }
@@ -26,22 +26,23 @@ div {
     display: block;
 }
 
-.content {
-    width: 100%;
-    padding-left: 16%;
-    padding-right: 16%;
+a:link { 
+    text-decoration: none; 
 }
 
-.center {
-    margin: 0 auto;
+
+a:visited { 
+    text-decoration: none; 
 }
 
-.container {
-    padding-right: 1vw;
-    padding-left: 1vw;
-    padding-bottom: 0.16vh;
-    margin-right: auto;
-    margin-left: auto;
+
+a:hover { 
+    text-decoration: underline; 
+}
+
+
+a:active {
+     text-decoration: none; 
 }
 
 /*STYLES FOR THE NAVBAR*/
@@ -82,27 +83,6 @@ div {
     color: #1A1A1A;
 }
 
-a:link { 
-    text-decoration: none; 
-}
-
-
-a:visited { 
-    text-decoration: none; 
-}
-
-
-a:hover { 
-    text-decoration: underline; 
-}
-
-
-a:active {
-     text-decoration: none; 
-}
-
-
-
 /*STYLES FOR THE ABOUT DIV*/
 .big-picture    {
     width: 20%;
@@ -114,21 +94,20 @@ a:active {
     border-radius: 15%;
 }
 
-/*STYLES FOR THE PORTFOLIO DIV*/
-
+/*STYLES FOR THE PORTFOLIO DIV */
 .row {
-    padding: 0px 16px 16px 16px;
+    padding: 0px 1vw 1vw 1vw;
+    margin-top: 1vw;
     text-align: center;
     display:    flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
 }
 
 .quarter {
-    margin: 16px;
-    border: 1px solid #45242D;
-    width: 20%;
     float: left;
     text-align: center;
-    display: block;
+    width: 20%;
 }
 
 .quarter-image-div {
@@ -139,4 +118,41 @@ a:active {
 /*REUSABLE ELEMENTS*/
 .shadow {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.content {
+    width: 100%;
+    padding-left: 16%;
+    padding-right: 16%;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.container {
+    padding-right: 1vw;
+    padding-left: 1vw;
+    padding-bottom: 0.16vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*Adjusts portfolio and navbar for small screens*/
+@media screen and (max-width: 767px) {
+    .row {
+        display: grid;
+    }
+
+    .quarter {
+        margin: 1vw auto;
+        width: 85%;
+    }
+}
+
+/*Adjusts Portfolio for Medium Screens*/
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+    .quarter {
+        width: 30%;
+    }
 }
