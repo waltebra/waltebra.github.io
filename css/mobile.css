@@ -1,0 +1,32 @@
+/*Adjusts elements for small screens*/
+@media screen and (max-width: 767px) {
+    /*PORTFOLIO CARD ELEMENTS*/
+    .row {
+        display: grid;
+    }
+
+    .quarter {
+        margin: 1vw auto;
+        width: 85%;
+    }
+
+    /*PORTFOLIO ARTICLE ELEMENTS*/
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .section-content {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "left . ."
+          "right . ."
+          ". . ."; 
+    }
+}

@@ -1,0 +1,6 @@
+/*Adjusts Elements for Medium Screens*/
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+    .quarter {
+        width: 30%;
+    }
+}
