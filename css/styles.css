@@ -127,22 +127,29 @@ a:active {
 
 /*STYLES FOR THE PORTFOLIO PAGES*/
 .left {
-    grid-area: left;
+    display: flex;
 }
 
 .right {
-    grid-area: right;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-card {
+    text-align: center;
+    width: 100%;
+    padding-top: 1vw;
+}
+
+.section-img {
+    width: 90%;
+    height: 24vh;
 }
 
 .section-content {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0vw 1vw; 
-    grid-template-areas: 
-      ". . ."
-      "left right ."
-      ". . ."; 
+    gap: 1vw; 
 }
 
 /*REUSABLE CLASSES*/
