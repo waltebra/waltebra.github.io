@@ -17,7 +17,6 @@
                     <div class="container">
                         <a class="navbar-item navbar-brand primary" href="../index.html">Braden Walters</a>
                         <div class="navbar-links">
-                            <a class="navbar-item primary" href="../index.html#portfolio">My Portfolio</a>
                             <a href="https://github.com/waltebra" class="fa navbar-item fa-github" target="_blank"></a>
                             <a href="https://www.linkedin.com/in/braden-w-1715b9231/" class="fa navbar-item fa-linkedin" target="_blank"></a>
                         </div>
@@ -35,13 +34,13 @@
                         <h3>Developing a solution to maintain a workflow involving Topaz signature capture pads.</h3>
 
                             <section id="problem">
+                                <h3>1. The Business Problem</h3>
                                 <div class="left">
-                                    <h3>1. The Business Problem</h3>
-                                    <p class="text">I was part of an initiative to upgrade our plants computers to Windows 11. We had recently delivered a new laptop to a Warehouse Technician,
+                                    <p>I was part of an initiative to upgrade our plants computers to Windows 11. We had recently delivered a new laptop to a Warehouse Technician,
                                         when he reported back that he could no longer use the site we had to collect signatures using his 
-                                        <a href="https://topazsystems.com/standard/t-s460.html">Topaz Signature Capture Pad</a>. The signature capture process is vital for the whole Logistics department, as it's necessary
+                                        <a href="https://topazsystems.com/standard/t-s460.html" target="_blank" class="accent">Topaz Signature Capture Pad</a>. The signature capture process is vital for the whole Logistics department, as it's necessary
                                         to get signatures for Bills of Lading, legal documents that track the movement and shipment of goods. Until the situation was remedied, the Warehouse Tech could not capture signatures,
-                                        and upgrades for computers in the Logistics department were put on hold. A temporary solution had to be found for the warehouse, and a permanent on would have to be found to continue 
+                                        and upgrades for computers in the Logistics department had to be put on hold. A temporary solution had to be found for the warehouse, and a permanent one would have to be found to continue 
                                         the upgrading process.</p>
                                 </div>
                                 <div class="right">
@@ -50,11 +49,11 @@
                             </section> <!--END PROBLEM SECTION-->
 
                             <section id="role">
+                                <h3>2. My Role in solving the Problem</h3>
                                 <div class="left">
-                                    <h3>2. My Role in solving the Problem</h3>
                                     <p>The first part of the project involved getting the signature capture pad working for the Warehouse Tech. I looked at the html file for the site the IT department originally created to 
                                         communicate with the pads, and found it required ActiveX to function. Windows 11 eliminated support for Internet Explorer and ActiveX with it, but luckily I was able to find a compatability
-                                        mode in Microsoft Edge to allow the site to use ActiveX. That was enough to work for now, but the project had landed on me to find a permanent replacement.
+                                        mode in Microsoft Edge to allow the site to use ActiveX. That was enough to work for now, but the project to find a permanent solution had landed on me.
                                     </p>
                                 </div>
                                 <div class="right">
@@ -63,9 +62,30 @@
                             </section> <!--END ROLE SECTION-->
 
                             <section id="solution">
+                                <h3>3. My Solution to the Problem</h3>
                                 <div class="left">
-                                    <h3>3. My Solution to the Problem</h3>
-                                    <p></p>
+                                    <p>The site was kept on a computer in the Logistics areas, but the process involved the semi-truck drivers themselves entering the numbers associated with the BOL in an input, signing the pad, and clicking a save button. The site would 
+                                        then download an image of the signature for each of the BOL numbers inputed on the page to a predetermined location on the network. I didn't think the modern norm of web-browsers favors allowing a website 
+                                        to have direct access to the users filesystem, so my first theory was that the old site would need more than a patchjob to work. 
+                                        I started with speaking with Topaz support to see what they recommended and examining solutions others had came up with online.
+                                        Nothing seemed to fit our circumstance, so I examined full BOL Signature Gathering hardware and technology. 
+                                        The existing solutions were expensive, would require restructuring the way the process already worked, and would make the signature pads we had worthless, so they were undesirable. 
+                                        I decided to look at ways to make a new site.
+                                    </br>
+                                    </br>
+                                        At first, I was going to make the site using PHP, because a server-side site would be able to speak to the network filesystem. However, we weren't already using PHP on the server for anything, and the setup process
+                                        was unfeasible, so I decided to exhaust everything I could on the client-side first. I found the <a href="https://chrome.google.com/webstore/detail/topaz-sigplusextlite-back/dhcpobccjkdnmibckgpejmbpmpembgco?hl=en" target="_blank" class="accent">Topaz SigPlusExtLite</a> Chrome extension.
+                                        Using the extension I could get a local site to communicate with the pad and return a Base64 string of the user signature. I figured out how to convert the Base64 into an image 
+                                        using the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="accent">Blob</a> object that the user could then download to their computer. This mimicked the previous workflow,
+                                        but it could only save the files to the devices downloads folder, which wasn't very useful. I was so close, but it seemed like I wouldn't be able to make it work.
+                                    </br>
+                                    </br>
+                                        I explored and combed through everything I could, until I stumbled on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="accent">JavaScript Filesystem API</a>.
+                                        I got a version working that opened up the Windows File Explorer when the save button was clicked, which still wasn't a satisfying solution. I was then able to figure out how to get the browser to allow the user
+                                        to select a file directory once, keep that path in memory until the window is closed, and save the images at that directory whenever the user gives the input to. I just set the page up to hide fields until the user selects the directory, and sent it out to test.
+                                        I also made a point to make it look just like the old site, even though it's not the prettiest, and it included on-page instructions that I could modify for the new one. The Logistics department opens the page anyways when they turn the computer on, so they were happy
+                                        with only having to add a single additional step to make the site work. The drivers didn't even notice the difference.
+                                    </p>
                                 </div>
                                 <div class="right">
 
@@ -73,8 +93,8 @@
                             </section> <!--END SOLUTION SECTION-->
 
                             <section id="effects">
+                                <h3>4. How the project affected Users and the Business</h3>
                                 <div class="left">
-                                    <h3>4. How the projected affected Users and the Business</h3>
                                     <p>The site I developed solved the business probem entirely: the pads were working, the BOL signature capture process was tested and functional, and the Windows 11 upgrade process in the
                                         Logistics department resumed. The continuation of developing an in-house software means there were no fees with introducing or maintaining the solution, and the readability and documentation
                                         of my code allowed others in the department to deliver and troubleshoot the site without prior experience with HTML, JavaScript, or the Topaz SDK. I was also very pleased to hear that the 
@@ -84,16 +104,33 @@
                             </section> <!--END EFFECTS SECTION-->
 
                             <section id="lesson">
-                                <div class="left">
-                                    <h3>5. What I learned doing the project</h3>
-                                    <p></p>
-                                </div>
-                                <div class="right">
-                                    
+                                <h3>5. What I learned doing the project</h3>
+                                <div class="center">
+                                    <p>I learned a lot of skills with this project. I learned how to: </p>
+                                    <ul>
+                                        <li><p>Deliver a short-term, stopgap solution to a user to keep them from having to halt their productivity.</p></li>
+                                        <li><p>Examine alternate and existing solutions to see if they could fix a business problem.</p></li>
+                                        <li><p>How to accurately determine how existing solutions would not solve the problem and that it's necessary to switch to developing one.</p></li>
+                                        <li><p>How to find the best plan to approach a development project with.</p></li>
+                                        <li><p>Search, explore, and read documentation to understand the technology I'm working with.</p></li>
+                                        <li><p>Work with the SDK of a piece of hardware.</p></li>
+                                        <li><p>How to examine alternate pathways and change course with development as necessary.</p></li>
+                                        <li><p>Design and deliver a solution that solves a problem, that end-users are pleased with, and continuous support can be provided for.</p></li>
+                                    </ul>
+
+                                    <p>I also learned some new technology with this project. I learned: </p>
+                                    <ul>
+                                        <li><p>The Topaz Signature Capture Pad <a href="https://www.topazsystems.com/software.html?tab=sdks-tab" target="_blank" class="accent">SDK</a></p></li>
+                                        <li><p>Base64 Strings.</p></li>
+                                        <li><p>The Javascript  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="accent">Blob</a> Object.</p></li>
+                                        <li><p>The Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="accent">FileSystem</a> API.</p></li>
+                                    </ul>
                                 </div>
                             </section> <!--END LESSON SECTION-->
                     </div> <!--END OF ARTICLE-->
                 </div><!--END OF CONTAINER DIV-->
+
+            </br>
             </main>
 
         <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>

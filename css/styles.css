@@ -138,7 +138,7 @@ a:active {
     margin-left: auto;
 }
 
-p.text {
+p {
     max-width: 74ch;
     padding-top: 1vh;
     padding-bottom: 1vh;
