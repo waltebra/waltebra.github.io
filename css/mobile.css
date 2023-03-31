@@ -18,4 +18,8 @@
     .right {
         width: 100%;
     }
+
+    .section-content {
+        display: block;
+    } 
 }

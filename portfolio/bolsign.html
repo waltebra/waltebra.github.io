@@ -2,7 +2,7 @@
     <html lang="en">
         <head>
             <meta charset="utf-8">
-            <meta name="description" content="Personal Website">
+            <meta name="description" content="Bol Signature Capture Site">
             <meta name="author" content="Braden Walters">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="../css/styles.css">
@@ -11,7 +11,7 @@
             <link rel="stylesheet" href="../css/colors.css">
             <!-- Add icon library -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <title>Braden Walters</title>
+            <title>Braden Walters - Bol Site</title>
         </head>
 
         <body class="content-bg">
@@ -28,10 +28,6 @@
             <main>
                 <div id="article" class="content">
                     <div class="container center primary-bg shadows">
-                        <div class="big-picture center">
-                            <img src="../img/topaz-signpad.jpg" alt="A Topaz T-S460 Signature Capture Pad.">
-                        </div>
-
                         <h1>Bill of Lading Signature Capture Site</h1>
                         <h3>Developing a solution to maintain a workflow involving Topaz signature capture pads.</h3>
 
@@ -51,7 +47,7 @@
                                             <div class="section-img center">
                                                 <img src="../img/topaz-signpad.jpg" alt="A Topaz T-S460 Signature Capture Pad.">
                                             </div>
-                                            <p>This is testing.</p>
+                                            <p>A Topaz T-S460 Signature Capture Pad.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -69,9 +65,9 @@
                                     <div class="right secondary-bg">
                                         <div class="section-card">
                                             <div class="section-img center">
-                                                <img src="../img/topaz-signpad.jpg" alt="A Topaz T-S460 Signature Capture Pad.">
+                                                <img src="../img/bol_pics/oldsite.png" alt="Original, non-functional site.">
                                             </div>
-                                            <p>This is testing.</p>
+                                            <p>The original, now nonfunctional site.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -88,15 +84,15 @@
                                             Nothing seemed to fit our circumstance, so I examined full BOL Signature Gathering hardware and technology. 
                                             The existing solutions were expensive, would require restructuring the way the process already worked, and would make the signature pads we had worthless, so they were undesirable. 
                                             I decided to look at ways to make a new site.
-                                        </br>
-                                        </br>
+                                        <br>
+                                        <br>
                                             At first, I was going to make the site using PHP, because a server-side site would be able to speak to the network filesystem. However, we weren't already using PHP on the server for anything, and the setup process
                                             was unfeasible, so I decided to exhaust everything I could on the client-side first. I found the <a href="https://chrome.google.com/webstore/detail/topaz-sigplusextlite-back/dhcpobccjkdnmibckgpejmbpmpembgco?hl=en" target="_blank" class="accent">Topaz SigPlusExtLite</a> Chrome extension.
                                             Using the extension I could get a local site to communicate with the pad and return a Base64 string of the user signature. I figured out how to convert the Base64 into an image 
                                             using the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="accent">Blob</a> object that the user could then download to their computer. This mimicked the previous workflow,
                                             but it could only save the files to the devices downloads folder, which wasn't very useful. I was so close, but it seemed like I wouldn't be able to make it work.
-                                        </br>
-                                        </br>
+                                        <br>
+                                        <br>
                                             I explored and combed through everything I could, until I stumbled on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="accent">JavaScript Filesystem API</a>.
                                             I got a version working that opened up the Windows File Explorer when the save button was clicked, which still wasn't a satisfying solution. I was then able to figure out how to get the browser to allow the user
                                             to select a file directory once, keep that path in memory until the window is closed, and save the images at that directory whenever the user gives the input to. I just set the page up to hide fields until the user selects the directory, and sent it out to test.
@@ -107,23 +103,23 @@
                                     <div class="right secondary-bg">
                                         <div class="section-card">
                                             <div class="section-img center">
-                                                <img src="../img/topaz-signpad.jpg" alt="A Topaz T-S460 Signature Capture Pad.">
+                                                <img src="../img/bol_pics/directory.png" alt="Setting the location in Windows File Explorer">
                                             </div>
-                                            <p>This is a testing image</p>
+                                            <p>Setting the location in the new site.</p>
                                         </div>
 
                                         <div class="section-card">
                                             <div class="section-img center">
-                                                <img src="../img/topaz-signpad.jpg" alt="A Topaz T-S460 Signature Capture Pad.">
+                                                <img src="../img/bol_pics/extension.png" alt="Topaz SigPlusExtLite Browser Window">
                                             </div>
-                                            <p>This is a testing image</p>
+                                            <p>The Chrome browser extension.</p>
                                         </div>
 
                                         <div class="section-card">
                                             <div class="section-img center">
-                                                <img src="../img/topaz-signpad.jpg" alt="A Topaz T-S460 Signature Capture Pad.">
+                                                <img src="../img/bol_pics/completed.png" alt="Form completed for entry">
                                             </div>
-                                            <p>This is a testing image</p>
+                                                <p>The signature was captured, and BOL numbers were input, user can now save the images to the directory.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -142,9 +138,9 @@
                                     <div class="right secondary-bg">
                                         <div class="section-card">
                                             <div class="section-img center">
-                                                <img src="../img/topaz-signpad.jpg" alt="A Topaz T-S460 Signature Capture Pad.">
+                                                <img src="../img/bol_pics/saved.png" alt="Saved BOL signatures in specified folder.">
                                             </div>
-                                            <p>This is testing.</p>
+                                            <p>The images were successfully saved to the directory.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -177,7 +173,7 @@
                     </div> <!--END OF ARTICLE-->
                 </div><!--END OF CONTAINER DIV-->
 
-            </br>
+            <br>
             </main>
 
         <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
