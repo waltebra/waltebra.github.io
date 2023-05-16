@@ -90,7 +90,13 @@ a:active {
 }
 
 .headshot {
-    border-radius: 15%;
+    border-radius: 8%;
+}
+
+.about-blurb {
+    width: 28%;
+    display: inline-block;
+    margin: 0vw 1vw;
 }
 
 /*STYLES FOR THE PORTFOLIO DIV */
