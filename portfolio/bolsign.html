@@ -19,8 +19,8 @@
                     <div class="container">
                         <a class="navbar-item navbar-brand primary" href="../index.html">Braden Walters</a>
                         <div class="navbar-links">
-                            <a href="https://github.com/waltebra" class="fa navbar-item fa-github" target="_blank"></a>
-                            <a href="https://www.linkedin.com/in/braden-w-1715b9231/" class="fa navbar-item fa-linkedin" target="_blank"></a>
+                            <a href="https://github.com/waltebra" class="fa navbar-item fa-github primary" target="_blank"></a>
+                            <a href="https://www.linkedin.com/in/braden-w-1715b9231/" class="fa navbar-item fa-linkedin primary" target="_blank"></a>
                         </div>
                     </div>
                 </div> <!--END OF NAVBAR-->
@@ -32,12 +32,12 @@
                         <h3>Developing a solution to maintain a workflow involving Topaz signature capture pads.</h3>
 
                             <section id="problem">
-                                <h3>1. The Business Problem</h3>
+                                <h3>1. Problem</h3>
                                 <div class="section-content">
                                     <div class="left">                                    
                                             <p>I was part of an initiative to upgrade our plants computers to Windows 11. We had recently delivered a new laptop to a Warehouse Technician,
                                             when he reported back that he could no longer use the site we had to collect signatures using his 
-                                            <a href="https://topazsystems.com/standard/t-s460.html" target="_blank" class="accent">Topaz Signature Capture Pad</a>. The signature capture process is vital for the whole Logistics department, as it's necessary
+                                            <a href="https://topazsystems.com/standard/t-s460.html" target="_blank" class="secondary underline">Topaz Signature Capture Pad</a>. The signature capture process is vital for the whole Logistics department, as it's necessary
                                             to get signatures for Bills of Lading, legal documents that track the movement and shipment of goods. Until the situation was remedied, the Warehouse Tech could not capture signatures,
                                             and upgrades for computers in the Logistics department had to be put on hold. A temporary solution had to be found for the warehouse, and a permanent one would have to be found to continue 
                                             the upgrading process.</p>
@@ -47,14 +47,14 @@
                                             <div class="section-img center">
                                                 <img src="../img/topaz-signpad.jpg" alt="A Topaz T-S460 Signature Capture Pad.">
                                             </div>
-                                            <p>A Topaz T-S460 Signature Capture Pad.</p>
+                                            <p class="primary">A Topaz T-S460 Signature Capture Pad.</p>
                                         </div>
                                     </div>
                                 </div>
                             </section> <!--END PROBLEM SECTION-->
 
                             <section id="role">
-                                <h3>2. My Role in solving the Problem</h3>
+                                <h3>2. My Role </h3>
                                 <div class="section-content">
                                     <div class="left">
                                         <p>The first part of the project involved getting the signature capture pad working for the Warehouse Tech. I looked at the html file for the site the IT department originally created to 
@@ -67,14 +67,14 @@
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/oldsite.png" alt="Original, non-functional site.">
                                             </div>
-                                            <p>The original, now nonfunctional site.</p>
+                                            <p class="primary">The original, now nonfunctional site.</p>
                                         </div>
                                     </div>
                                 </div>
                             </section> <!--END ROLE SECTION-->
 
                             <section id="solution">
-                                <h3>3. My Solution to the Problem</h3>
+                                <h3>3. Solution</h3>
                                 <div class="section-content">
                                     <div class="left">
                                         <p>The site was kept on a computer in the Logistics areas, but the process involved the semi-truck drivers themselves entering the numbers associated with the BOL in an input, signing the pad, and clicking a save button. The site would 
@@ -87,13 +87,13 @@
                                         <br>
                                         <br>
                                             At first, I was going to make the site using PHP, because a server-side site would be able to speak to the network filesystem. However, we weren't already using PHP on the server for anything, and the setup process
-                                            was unfeasible, so I decided to exhaust everything I could on the client-side first. I found the <a href="https://chrome.google.com/webstore/detail/topaz-sigplusextlite-back/dhcpobccjkdnmibckgpejmbpmpembgco?hl=en" target="_blank" class="accent">Topaz SigPlusExtLite</a> Chrome extension.
+                                            was unfeasible, so I decided to exhaust everything I could on the client-side first. I found the <a href="https://chrome.google.com/webstore/detail/topaz-sigplusextlite-back/dhcpobccjkdnmibckgpejmbpmpembgco?hl=en" target="_blank" class="secondary underline">Topaz SigPlusExtLite</a> Chrome extension.
                                             Using the extension I could get a local site to communicate with the pad and return a Base64 string of the user signature. I figured out how to convert the Base64 into an image 
-                                            using the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="accent">Blob</a> object that the user could then download to their computer. This mimicked the previous workflow,
+                                            using the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="secondary underline">Blob</a> object that the user could then download to their computer. This mimicked the previous workflow,
                                             but it could only save the files to the devices downloads folder, which wasn't very useful. I was so close, but it seemed like I wouldn't be able to make it work.
                                         <br>
                                         <br>
-                                            I explored and combed through everything I could, until I stumbled on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="accent">JavaScript Filesystem API</a>.
+                                            I explored and combed through everything I could, until I stumbled on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="secondary underline">JavaScript Filesystem API</a>.
                                             I got a version working that opened up the Windows File Explorer when the save button was clicked, which still wasn't a satisfying solution. I was then able to figure out how to get the browser to allow the user
                                             to select a file directory once, keep that path in memory until the window is closed, and save the images at that directory whenever the user gives the input to. I just set the page up to hide fields until the user selects the directory, and sent it out to test.
                                             I also made a point to make it look just like the old site, even though it's not the prettiest, and it included on-page instructions that I could modify for the new one. The Logistics department opens the page anyways when they turn the computer on, so they were happy
@@ -105,28 +105,28 @@
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/directory.png" alt="Setting the location in Windows File Explorer">
                                             </div>
-                                            <p>Setting the location in the new site.</p>
+                                            <p class="primary">Setting the location in the new site.</p>
                                         </div>
 
                                         <div class="section-card">
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/extension.png" alt="Topaz SigPlusExtLite Browser Window">
                                             </div>
-                                            <p>The Chrome browser extension.</p>
+                                            <p class="primary">The Chrome browser extension.</p>
                                         </div>
 
                                         <div class="section-card">
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/completed.png" alt="Form completed for entry">
                                             </div>
-                                                <p>The signature was captured, and BOL numbers were input, user can now save the images to the directory.</p>
+                                                <p class="primary">The signature was captured, and BOL numbers were input, user can now save the images to the directory.</p>
                                         </div>
                                     </div>
                                 </div>
                             </section> <!--END SOLUTION SECTION-->
 
                             <section id="effects">
-                                <h3>4. How the project affected Users and the Business</h3>
+                                <h3>4. Business Value</h3>
                                 <div class="section-content">
                                     <div class="left">
                                         <p>The site I developed solved the business probem entirely: the pads were working, the BOL signature capture process was tested and functional, and the Windows 11 upgrade process in the
@@ -140,14 +140,14 @@
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/saved.png" alt="Saved BOL signatures in specified folder.">
                                             </div>
-                                            <p>The images were successfully saved to the directory.</p>
+                                            <p class="primary">The images were successfully saved to the directory.</p>
                                         </div>
                                     </div>
                                 </div>
                             </section> <!--END EFFECTS SECTION-->
 
                             <section id="lesson">
-                                <h3>5. What I learned doing the project</h3>
+                                <h3>5. Lessons Learnt</h3>
                                 <div class="center">
                                     <p>I learned a lot of skills with this project. I learned how to: </p>
                                     <ul>
@@ -163,10 +163,10 @@
 
                                     <p>I also learned some new technology with this project. I learned: </p>
                                     <ul>
-                                        <li><p>The Topaz Signature Capture Pad <a href="https://www.topazsystems.com/software.html?tab=sdks-tab" target="_blank" class="accent">SDK</a></p></li>
+                                        <li><p>The Topaz Signature Capture Pad <a href="https://www.topazsystems.com/software.html?tab=sdks-tab" target="_blank" class="secondary underline">SDK</a></p></li>
                                         <li><p>Base64 Strings.</p></li>
-                                        <li><p>The Javascript  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="accent">Blob</a> Object.</p></li>
-                                        <li><p>The Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="accent">FileSystem</a> API.</p></li>
+                                        <li><p>The Javascript  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="secondary underline">Blob</a> Object.</p></li>
+                                        <li><p>The Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="secondary underline">FileSystem</a> API.</p></li>
                                     </ul>
                                 </div>
                             </section> <!--END LESSON SECTION-->
