@@ -21,4 +21,11 @@
         width: 60%;
         height: 24vh;
     }
+
+    /*ABOUT DIV ELEMENTS*/
+    .about-blurb {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
 }

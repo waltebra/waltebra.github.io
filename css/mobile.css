@@ -22,4 +22,11 @@
     .section-content {
         display: block;
     } 
+
+    /*ABOUT DIV ELEMENTS*/
+    .about-blurb {
+        width: 88%;
+        margin: 0 auto;
+        display: block;
+    }
 }
