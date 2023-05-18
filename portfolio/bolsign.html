@@ -78,24 +78,22 @@
                                 <div class="section-content">
                                     <div class="left">
                                         <p>The site was kept on a computer in the Logistics areas, but the process involved the semi-truck drivers themselves entering the numbers associated with the BOL in an input, signing the pad, and clicking a save button. The site would 
-                                            then download an image of the signature for each of the BOL numbers inputed on the page to a predetermined location on the network. My theory going into the project was that the old site would need more than a patchjob to work. 
-                                            I started with speaking with Topaz support to see what they recommended and examining solutions others had came up with online.
-                                            Nothing seemed to fit our circumstance, so I examined full BOL Signature Gathering hardware and technology. 
-                                            The existing solutions were expensive, would require restructuring the way the process already worked, and would make the signature pads we had worthless, so they were undesirable. 
-                                            I decided to look at ways to make a new site.
+                                            then download an image of the signature for each of the BOL numbers to a predetermined location on the network. I figured this would need more than a patchjob to work, but I also didn't want to disrupt the workflow as it was.
+                                            I started with speaking with Topaz support to see what they recommended and examining solutions others had came up with online. Nothing seemed to fit our circumstances, so I examined alternative BOL Signature Gathering hardware and technology. 
+                                            The existing solutions were expensive, would require restructuring the way the process already worked, and would make the signature pads we had worthless, so they were undesirable.
                                         <br>
                                         <br>
                                             I found the <a href="https://chrome.google.com/webstore/detail/topaz-sigplusextlite-back/dhcpobccjkdnmibckgpejmbpmpembgco?hl=en" target="_blank" class="secondary underline">Topaz SigPlusExtLite</a> Chrome extension.
                                             Using the extension, I could get a local site to communicate with the pad and return a Base64 string of the user signature. I figured out how to convert the Base64 into an image 
-                                            using the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="secondary underline">Blob</a> object that the user could then download to their computer. This mimicked the previous workflow,
-                                            but it could only save the files to the devices downloads folder, which wasn't very useful.
+                                            using the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="secondary underline">Blob</a> object. The user could then download the image to their computer. This mimicked the previous workflow,
+                                            but it could only save the files to the devices downloads folder, and not a set location.
                                         <br>
                                         <br>
                                             I explored and found the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="secondary underline">JavaScript Filesystem API</a>.
-                                            I got a version working that opened up the Windows File Explorer when the save button was clicked, which still wasn't a satisfying solution. I was then able to figure out how to get the browser to allow the user
-                                            to select a file directory once, keep that path in memory until the window is closed, and save the images at that directory whenever the user gives the input to. I just set the page up to hide fields until the user selects the directory, and sent it out to test.
-                                            I also made a point to make it look just like the old site, even though it's not the prettiest, and it included on-page instructions that I could modify for the new one. The Logistics department opens the page anyways when they turn the computer on, so they were happy
-                                            with only having to add a single additional step to make the site work. The drivers didn't even notice the difference.
+                                            I got a version working that opened up the Windows File Explorer when the save button was clicked, which still wasn't a good solution. I was then able to figure out how to get the browser to allow the user
+                                            to select a file directory once, keep that path in memory until the window is closed, and save the images at that directory whenever the user clicks a button. I sent this one out to test. The Logistics department opens the page anyways 
+                                            when they turn the computer on, so they were happy with only having to add a single additional step to make the site work. The drivers didn't even notice the difference.
+                                            I also made a point to make it look just like the old site, even though the design is not the prettiest. 
                                         </p>
                                     </div>
                                     <div class="right secondary-bg">

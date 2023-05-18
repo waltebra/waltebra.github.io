@@ -120,8 +120,9 @@ a:active {
     height: 24vh;
 }
 
-.hovered-quarter {
-    opacity: 70%;
+.quarter:hover {
+    box-shadow: 0.8em 0.8em 0.24em #5FDE70;
+    opacity: 90%; 
 }
 
 /*STYLES FOR THE PORTFOLIO PAGES*/
