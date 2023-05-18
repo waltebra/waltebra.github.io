@@ -37,10 +37,10 @@
                                     <div class="left">                                    
                                             <p>I was part of an initiative to upgrade our plants computers to Windows 11. We had recently delivered a new laptop to a Warehouse Technician,
                                             when he reported back that he could no longer use the site we had to collect signatures using his 
-                                            <a href="https://topazsystems.com/standard/t-s460.html" target="_blank" class="secondary underline">Topaz Signature Capture Pad</a>. The signature capture process is vital for the whole Logistics department, as it's necessary
+                                            <a href="https://topazsystems.com/standard/t-s460.html" target="_blank" class="secondary underline">Topaz Signature Capture Pad</a>. The signature capture process is necessary
                                             to get signatures for Bills of Lading, legal documents that track the movement and shipment of goods. Until the situation was remedied, the Warehouse Tech could not capture signatures,
                                             and upgrades for computers in the Logistics department had to be put on hold. A temporary solution had to be found for the warehouse, and a permanent one would have to be found to continue 
-                                            the upgrading process.</p>
+                                            the upgrading.</p>
                                     </div>
                                     <div class="right secondary-bg">
                                         <div class="section-card">
@@ -78,22 +78,20 @@
                                 <div class="section-content">
                                     <div class="left">
                                         <p>The site was kept on a computer in the Logistics areas, but the process involved the semi-truck drivers themselves entering the numbers associated with the BOL in an input, signing the pad, and clicking a save button. The site would 
-                                            then download an image of the signature for each of the BOL numbers inputed on the page to a predetermined location on the network. I didn't think the modern norm of web-browsers favors allowing a website 
-                                            to have direct access to the users filesystem, so my first theory was that the old site would need more than a patchjob to work. 
+                                            then download an image of the signature for each of the BOL numbers inputed on the page to a predetermined location on the network. My theory going into the project was that the old site would need more than a patchjob to work. 
                                             I started with speaking with Topaz support to see what they recommended and examining solutions others had came up with online.
                                             Nothing seemed to fit our circumstance, so I examined full BOL Signature Gathering hardware and technology. 
                                             The existing solutions were expensive, would require restructuring the way the process already worked, and would make the signature pads we had worthless, so they were undesirable. 
                                             I decided to look at ways to make a new site.
                                         <br>
                                         <br>
-                                            At first, I was going to make the site using PHP, because a server-side site would be able to speak to the network filesystem. However, we weren't already using PHP on the server for anything, and the setup process
-                                            was unfeasible, so I decided to exhaust everything I could on the client-side first. I found the <a href="https://chrome.google.com/webstore/detail/topaz-sigplusextlite-back/dhcpobccjkdnmibckgpejmbpmpembgco?hl=en" target="_blank" class="secondary underline">Topaz SigPlusExtLite</a> Chrome extension.
-                                            Using the extension I could get a local site to communicate with the pad and return a Base64 string of the user signature. I figured out how to convert the Base64 into an image 
+                                            I found the <a href="https://chrome.google.com/webstore/detail/topaz-sigplusextlite-back/dhcpobccjkdnmibckgpejmbpmpembgco?hl=en" target="_blank" class="secondary underline">Topaz SigPlusExtLite</a> Chrome extension.
+                                            Using the extension, I could get a local site to communicate with the pad and return a Base64 string of the user signature. I figured out how to convert the Base64 into an image 
                                             using the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" class="secondary underline">Blob</a> object that the user could then download to their computer. This mimicked the previous workflow,
-                                            but it could only save the files to the devices downloads folder, which wasn't very useful. I was so close, but it seemed like I wouldn't be able to make it work.
+                                            but it could only save the files to the devices downloads folder, which wasn't very useful.
                                         <br>
                                         <br>
-                                            I explored and combed through everything I could, until I stumbled on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="secondary underline">JavaScript Filesystem API</a>.
+                                            I explored and found the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem" target="_blank" class="secondary underline">JavaScript Filesystem API</a>.
                                             I got a version working that opened up the Windows File Explorer when the save button was clicked, which still wasn't a satisfying solution. I was then able to figure out how to get the browser to allow the user
                                             to select a file directory once, keep that path in memory until the window is closed, and save the images at that directory whenever the user gives the input to. I just set the page up to hide fields until the user selects the directory, and sent it out to test.
                                             I also made a point to make it look just like the old site, even though it's not the prettiest, and it included on-page instructions that I could modify for the new one. The Logistics department opens the page anyways when they turn the computer on, so they were happy
@@ -101,12 +99,12 @@
                                         </p>
                                     </div>
                                     <div class="right secondary-bg">
-                                        <div class="section-card">
+                                        <!--<div class="section-card">
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/directory.png" alt="Setting the location in Windows File Explorer">
                                             </div>
                                             <p class="primary">Setting the location in the new site.</p>
-                                        </div>
+                                        </div> -->
 
                                         <div class="section-card">
                                             <div class="section-img center">
@@ -130,9 +128,9 @@
                                 <div class="section-content">
                                     <div class="left">
                                         <p>The site I developed solved the business probem entirely: the pads were working, the BOL signature capture process was tested and functional, and the Windows 11 upgrade process in the
-                                            Logistics department resumed. The continuation of developing an in-house software means there were no fees with introducing or maintaining the solution, and the readability and documentation
-                                            of my code allowed others in the department to deliver and troubleshoot the site without prior experience with HTML, JavaScript, or the Topaz SDK. I was also very pleased to hear that the 
-                                            users of the site in the Logistics department were very happy with the new site as well. They were especially pleased that the site did not require them to change their workflow or learn a new process.
+                                            Logistics department resumed. There were no fees with introducing or maintaining the solution, and the readability and documentation
+                                            of my code allowed others in the department to deliver the site without prior experience with HTML, JavaScript, or the Topaz SDK. The 
+                                            users of the site in Logistics were also very happy with the new site. They were especially happy that they didn't have to change their workflow or learn a new process.
                                         </p>
                                     </div>
                                     <div class="right secondary-bg">
