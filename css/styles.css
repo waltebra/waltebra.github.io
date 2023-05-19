@@ -14,13 +14,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Segoe UI",Arial,sans-serif;
     font-weight: 400;
-    margin: 10px 0;
+    margin: 1vh 0;
 }
 
 p {
     max-width: 74ch;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
 }
 
 img {
@@ -49,10 +47,10 @@ a:active {
     margin: 0 0;
     position: relative;
     min-height: 80px;
-    letter-spacing: 2px;
+    letter-spacing: .04vw;
     
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 1.2vw;
+    padding-top: 1.2vw;
 }
 
 .navbar-header {
@@ -70,6 +68,7 @@ a:active {
 
 .navbar-links {
     float: right;
+    margin-right: 1vw;
 }
 
 .fa {
@@ -84,9 +83,10 @@ a:active {
 
 /*STYLES FOR THE ABOUT DIV*/
 .big-picture    {
-    width: 32%;
+    width: 36%;
     min-width: 200px;
     height: 32vh;
+    padding-top: 1vw;
 }
 
 .headshot {
@@ -95,8 +95,16 @@ a:active {
 
 .about-blurb {
     width: 28%;
+    height: 100%;
     display: inline-block;
     margin: 0vw 1vw;
+}
+
+.about {
+    display:    flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    padding-bottom: 1vh !important;
 }
 
 /*STYLES FOR THE PORTFOLIO DIV */
@@ -121,8 +129,7 @@ a:active {
 }
 
 .quarter:hover {
-    box-shadow: 0.8em 0.8em 0.24em #5FDE70;
-    opacity: 90%; 
+    box-shadow: 0.8em 0.8em 0.12em #5FDE70;
 }
 
 /*STYLES FOR THE PORTFOLIO PAGES*/
@@ -177,8 +184,8 @@ a:active {
 }
 
 .container {
-    padding-right: 1vw;
-    padding-left: 1vw;
+    padding-right: 0.84w;
+    padding-left: 0.84vw;
     padding-bottom: 0.16vh;
     margin-right: auto;
     margin-left: auto;
