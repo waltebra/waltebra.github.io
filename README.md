@@ -2,6 +2,7 @@
 
 # personal portfolio site
 
-# Adjust spacing to porftoflo cases
-# better headshot
-# tell a better story in about me
+# Better headshot
+# Better Colorscheme
+# Settle on an approach to case study photo layout
+# Make site look more MODERN
