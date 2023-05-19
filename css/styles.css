@@ -135,6 +135,10 @@ a:active {
     flex-wrap: wrap;
 }
 
+.section-title {
+    margin-bottom: 0;
+}
+
 .section-card {
     text-align: center;
     width: 100%;
@@ -143,7 +147,12 @@ a:active {
 
 .section-img {
     width: 90%;
-    height: 24vh;
+    height: 28vh;
+}
+
+.section-text {
+    margin-top: 1vh;
+    padding-top: 0;
 }
 
 .section-content {

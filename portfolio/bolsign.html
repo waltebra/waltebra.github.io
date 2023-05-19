@@ -32,10 +32,10 @@
                         <h3>Developing a solution to maintain a workflow involving Topaz signature capture pads.</h3>
 
                             <section id="problem">
-                                <h3>1. Problem</h3>
+                                <h3 class="section-title">1. Problem</h3>
                                 <div class="section-content">
                                     <div class="left">                                    
-                                            <p>I was part of an initiative to upgrade our plants computers to Windows 11. We had recently delivered a new laptop to a Warehouse Technician,
+                                            <p class="section-text">I was part of an initiative to upgrade our plants computers to Windows 11. We had recently delivered a new laptop to a Warehouse Technician,
                                             when he reported back that he could no longer use the site we had to collect signatures using his 
                                             <a href="https://topazsystems.com/standard/t-s460.html" target="_blank" class="secondary underline">Topaz Signature Capture Pad</a>. The signature capture process is necessary
                                             to get signatures for Bills of Lading, legal documents that track the movement and shipment of goods. Until the situation was remedied, the Warehouse Tech could not capture signatures,
@@ -47,17 +47,17 @@
                                             <div class="section-img center">
                                                 <img src="../img/topaz-signpad.jpg" alt="A Topaz T-S460 Signature Capture Pad.">
                                             </div>
-                                            <p class="primary">A Topaz T-S460 Signature Capture Pad.</p>
+                                            <p class="primary center">A Topaz T-S460 Signature Capture Pad.</p>
                                         </div>
                                     </div>
                                 </div>
                             </section> <!--END PROBLEM SECTION-->
 
                             <section id="role">
-                                <h3>2. My Role </h3>
+                                <h3 class="section-title">2. My Role </h3>
                                 <div class="section-content">
                                     <div class="left">
-                                        <p>The first part of the project involved getting the signature capture pad working for the Warehouse Tech. I looked at the html file for the site the IT department originally created to 
+                                        <p class="section-text">The first part of the project involved getting the signature capture pad working for the Warehouse Tech. I looked at the html file for the site the IT department originally created to 
                                             communicate with the pads, and found it required ActiveX to function. Windows 11 eliminated support for Internet Explorer and ActiveX with it, but luckily I was able to find a compatability
                                             mode in Microsoft Edge to allow the site to use ActiveX. That was enough to work for now, but the project to find a permanent solution had landed on me.
                                         </p>
@@ -67,17 +67,17 @@
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/oldsite.png" alt="Original, non-functional site.">
                                             </div>
-                                            <p class="primary">The original, now nonfunctional site.</p>
+                                            <p class="primary center">The original, now nonfunctional site.</p>
                                         </div>
                                     </div>
                                 </div>
                             </section> <!--END ROLE SECTION-->
 
                             <section id="solution">
-                                <h3>3. Solution</h3>
+                                <h3 class="section-title">3. Solution</h3>
                                 <div class="section-content">
                                     <div class="left">
-                                        <p>The site was kept on a computer in the Logistics areas, but the process involved the semi-truck drivers themselves entering the numbers associated with the BOL in an input, signing the pad, and clicking a save button. The site would 
+                                        <p class="section-text">The site was kept on a computer in the Logistics areas, but the process involved the semi-truck drivers themselves entering the numbers associated with the BOL in an input, signing the pad, and clicking a save button. The site would 
                                             then download an image of the signature for each of the BOL numbers to a predetermined location on the network. I figured this would need more than a patchjob to work, but I also didn't want to disrupt the workflow as it was.
                                             I started with speaking with Topaz support to see what they recommended and examining solutions others had came up with online. Nothing seemed to fit our circumstances, so I examined alternative BOL Signature Gathering hardware and technology. 
                                             The existing solutions were expensive, would require restructuring the way the process already worked, and would make the signature pads we had worthless, so they were undesirable.
@@ -97,35 +97,28 @@
                                         </p>
                                     </div>
                                     <div class="right secondary-bg">
-                                        <!--<div class="section-card">
-                                            <div class="section-img center">
-                                                <img src="../img/bol_pics/directory.png" alt="Setting the location in Windows File Explorer">
-                                            </div>
-                                            <p class="primary">Setting the location in the new site.</p>
-                                        </div> -->
-
                                         <div class="section-card">
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/extension.png" alt="Topaz SigPlusExtLite Browser Window">
                                             </div>
-                                            <p class="primary">The Chrome browser extension.</p>
+                                            <p class="primary center">The Chrome browser extension.</p>
                                         </div>
 
                                         <div class="section-card">
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/completed.png" alt="Form completed for entry">
                                             </div>
-                                                <p class="primary">The signature was captured, and BOL numbers were input, user can now save the images to the directory.</p>
+                                                <p class="primary center">The signature was captured, and BOL numbers were input, user can now save the images to the directory.</p>
                                         </div>
                                     </div>
                                 </div>
                             </section> <!--END SOLUTION SECTION-->
 
                             <section id="effects">
-                                <h3>4. Business Value</h3>
+                                <h3 class="section-title">4. Business Value</h3>
                                 <div class="section-content">
                                     <div class="left">
-                                        <p>The site I developed solved the business probem entirely: the pads were working, the BOL signature capture process was tested and functional, and the Windows 11 upgrade process in the
+                                        <p class="section-text">The site I developed solved the business probem entirely: the pads were working, the BOL signature capture process was tested and functional, and the Windows 11 upgrade process in the
                                             Logistics department resumed. There were no fees with introducing or maintaining the solution, and the readability and documentation
                                             of my code allowed others in the department to deliver the site without prior experience with HTML, JavaScript, or the Topaz SDK. The 
                                             users of the site in Logistics were also very happy with the new site. They were especially happy that they didn't have to change their workflow or learn a new process.
@@ -136,16 +129,16 @@
                                             <div class="section-img center">
                                                 <img src="../img/bol_pics/saved.png" alt="Saved BOL signatures in specified folder.">
                                             </div>
-                                            <p class="primary">The images were successfully saved to the directory.</p>
+                                            <p class="primary center">The images were successfully saved to the directory.</p>
                                         </div>
                                     </div>
                                 </div>
                             </section> <!--END EFFECTS SECTION-->
 
                             <section id="lesson">
-                                <h3>5. Lessons Learnt</h3>
+                                <h3 class="section-title">5. Lessons Learnt</h3>
                                 <div class="center">
-                                    <p>I learned a lot of skills with this project. I learned how to: </p>
+                                    <p class="section-text">I learned a lot of skills with this project. I learned how to: </p>
                                     <ul>
                                         <li><p>Deliver a short-term, stopgap solution to a user to keep them from having to halt their productivity.</p></li>
                                         <li><p>Examine alternate and existing solutions to see if they could fix a business problem.</p></li>
