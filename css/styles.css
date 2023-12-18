@@ -6,7 +6,7 @@
 body {
     display: block;
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5;
     margin: 0;
 }
@@ -77,8 +77,8 @@ a:active {
     text-decoration: none;
     margin: 2px 2px;
     border-radius: 50%;
-    background: #6A916F;
-    color: #1A1A1A;
+    background: #FFFFFF;
+    color: #000000;
 }
 
 /*STYLES FOR THE ABOUT DIV*/
@@ -104,13 +104,11 @@ a:active {
     display:    flex;
     flex-wrap: wrap; 
     justify-content: space-around;
-    padding-bottom: 1vh !important;
 }
 
 /*STYLES FOR THE PORTFOLIO DIV */
 .row {
     padding: 0px 1vw 1vw 1vw;
-    margin-top: 1vw;
     text-align: center;
     display:    flex;
     flex-wrap: wrap; 
@@ -177,6 +175,7 @@ a:active {
     width: 100%;
     padding-left: 16%;
     padding-right: 16%;
+    margin: 1vh 0 1vh;
 }
 
 .center {
